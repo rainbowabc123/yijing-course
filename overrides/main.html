@@ -116,5 +116,19 @@
 </div>
 {% else %}
 {{ super() }}
+<script>
+  // 在侧边栏顶部添加返回主页链接
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.querySelector('.md-sidebar--primary .md-sidebar__scrollwrap');
+    if (sidebar) {
+      const homeLink = document.createElement('a');
+      homeLink.href = '{{ config.site_url or "/" }}';
+      homeLink.className = 'md-nav__link md-nav__link--home';
+      homeLink.innerHTML = '← 返回主页';
+      homeLink.style.cssText = 'display: block; padding: 1rem 0.8rem; color: var(--gold); font-family: "Noto Serif SC", serif; font-size: 0.9rem; border-bottom: 1px solid var(--border-gold); text-decoration: none;';
+      sidebar.insertBefore(homeLink, sidebar.firstChild);
+    }
+  });
+</script>
 {% endif %}
 {% endblock %}

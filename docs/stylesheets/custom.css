@@ -45,6 +45,20 @@ body,
   color: var(--gold-light) !important;
 }
 
+/* 课程页隐藏header和tabs */
+body:not(:has(.home-page)) .md-header {
+  display: none !important;
+}
+
+body:not(:has(.home-page)) .md-tabs {
+  display: none !important;
+}
+
+/* 课程页调整主内容区位置 */
+body:not(:has(.home-page)) .md-main {
+  padding-top: 0 !important;
+}
+
 /* ===== 导航 tabs ===== */
 .md-tabs {
   background-color: #0f0e08 !important;
@@ -73,6 +87,11 @@ body,
 
 .md-sidebar__scrollwrap {
   background-color: var(--bg-sidebar) !important;
+}
+
+/* 返回主页链接样式 */
+.md-nav__link--home:hover {
+  color: var(--gold-light) !important;
 }
 
 .md-nav {
