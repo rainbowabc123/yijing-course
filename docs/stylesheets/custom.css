@@ -586,6 +586,13 @@ body:has(.home-page) .md-content {
     white-space: normal !important;
     line-height: 1.5 !important;
   }
+
+  /* 确保section标题（模块标题）在移动端显示 */
+  .md-sidebar--primary .md-nav__item--section > .md-nav__link {
+    display: block !important;
+    font-weight: 600 !important;
+    color: var(--gold-light) !important;
+  }
 }
 
 /* 小屏幕优化（手机竖屏） */
