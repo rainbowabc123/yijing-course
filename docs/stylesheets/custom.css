@@ -63,6 +63,8 @@ body,
   .md-nav__item--nested .md-nav {
     display: block !important;
     position: static !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   /* 强制显示所有导航，覆盖 Material 主题的 checkbox 控制 */
@@ -70,6 +72,12 @@ body,
     display: block !important;
     max-height: none !important;
     position: static !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* 更具体的选择器：针对所有嵌套层级 */
+  .md-nav--primary .md-nav {
     opacity: 1 !important;
     transform: none !important;
   }
