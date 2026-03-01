@@ -69,22 +69,26 @@ body,
     display: none !important;
   }
 
-  /* 第一层：课程名称（易经个人成长课等） */
-  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  /* 第一层：课程名称（易经个人成长课等） - 包括link和label */
+  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
+  .md-nav--primary > .md-nav__list > .md-nav__item > label {
     font-size: 1rem !important;
     font-weight: 600 !important;
     color: var(--gold) !important;
     padding: 0.8rem 1rem !important;
     border-bottom: 1px solid var(--border-gold) !important;
+    display: block !important;
   }
 
-  /* 第二层：模块名称 */
-  .md-nav--primary > .md-nav__list > .md-nav__item .md-nav__item--nested > .md-nav__link {
+  /* 第二层：模块名称 - 包括link和label */
+  .md-nav--primary > .md-nav__list > .md-nav__item .md-nav__item--nested > .md-nav__link,
+  .md-nav--primary > .md-nav__list > .md-nav__item .md-nav__item--nested > label {
     font-size: 0.9rem !important;
     font-weight: 500 !important;
     color: var(--gold-light) !important;
     padding: 0.6rem 1rem 0.6rem 1.5rem !important;
     margin-top: 0.5rem !important;
+    display: block !important;
   }
 
   /* 第三层：具体讲次 */
