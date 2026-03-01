@@ -514,10 +514,8 @@ body:has(.home-page) .md-content {
     font-size: 0.95rem !important;
     line-height: 1.9 !important;
   }
-  /* 手机端侧边栏收起时不占位 */
-  .md-sidebar {
-    width: 100% !important;
-  }
+  /* 手机端侧边栏：保持Material主题的默认toggle行为 */
+  /* 移除 width 强制设置，让Material主题的transform机制正常工作 */
 }
 
 @media (max-width: 480px) {
