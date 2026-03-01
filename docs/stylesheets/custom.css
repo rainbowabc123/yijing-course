@@ -95,6 +95,19 @@ body,
   color: var(--gold-light) !important;
 }
 
+/* 侧边栏导航标题（书形按钮）样式 */
+.md-nav__title {
+  color: var(--gold) !important;
+  font-family: "Noto Serif SC", serif !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid var(--border-gold) !important;
+  margin-bottom: 1rem !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 2 !important;
+  background-color: var(--bg-sidebar) !important;
+}
+
 .md-nav {
   background-color: transparent !important;
 }
@@ -102,9 +115,13 @@ body,
 .md-nav__title {
   color: var(--gold) !important;
   font-family: "Noto Serif SC", serif !important;
-  background-color: transparent !important;
-  border-bottom: 1px solid var(--border-gold) !important;
-  padding-bottom: 0.5rem !important;
+  background-color: var(--bg-sidebar) !important;
+  border-bottom: 2px solid var(--border-gold) !important;
+  padding-bottom: 0.8rem !important;
+  margin-bottom: 1rem !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 2 !important;
 }
 
 .md-nav__item .md-nav__link {
