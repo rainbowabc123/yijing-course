@@ -58,6 +58,49 @@ body,
   body:not(:has(.home-page)) .md-main {
     padding-top: 0 !important;
   }
+
+  /* 移动端侧边栏：默认全部展开 */
+  .md-nav__item--nested .md-nav {
+    display: block !important;
+  }
+
+  /* 隐藏所有导航标题（书形按钮） */
+  .md-nav__title {
+    display: none !important;
+  }
+
+  /* 第一层：课程名称（易经个人成长课等） */
+  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: var(--gold) !important;
+    padding: 0.8rem 1rem !important;
+    border-bottom: 1px solid var(--border-gold) !important;
+  }
+
+  /* 第二层：模块名称 */
+  .md-nav--primary > .md-nav__list > .md-nav__item .md-nav__item--nested > .md-nav__link {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    color: var(--gold-light) !important;
+    padding: 0.6rem 1rem 0.6rem 1.5rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  /* 第三层：具体讲次 */
+  .md-nav--primary > .md-nav__list > .md-nav__item .md-nav__item--nested .md-nav__item > .md-nav__link {
+    font-size: 0.85rem !important;
+    font-weight: 400 !important;
+    color: var(--md-default-fg-color--light) !important;
+    padding: 0.5rem 1rem 0.5rem 2.5rem !important;
+  }
+
+  /* 当前激活的讲次 */
+  .md-nav--primary .md-nav__item--active > .md-nav__link {
+    color: var(--gold) !important;
+    background-color: rgba(212, 175, 55, 0.1) !important;
+    border-left: 3px solid var(--gold) !important;
+  }
 }
 
 /* ===== 导航 tabs ===== */
