@@ -572,7 +572,11 @@ body:has(.home-page) .md-content {
   /* 侧边栏在移动端默认隐藏，但可以通过汉堡菜单打开 */
   /* 不使用 display: none，以保持 Material 主题的 toggle 功能 */
 
-  /* 只修复侧边栏内容样式，不改变布局 */
+  /* 修复移动端侧边栏样式 */
+  .md-sidebar--primary {
+    /* 不设置width，保持Material主题默认 */
+  }
+
   .md-sidebar--primary .md-nav__title {
     font-size: 0.9rem !important;
     padding: 0.6rem 0.8rem !important;
@@ -585,6 +589,24 @@ body:has(.home-page) .md-content {
     padding: 0.5rem 0.8rem !important;
     white-space: normal !important;
     line-height: 1.5 !important;
+  }
+
+  /* 确保所有导航层级都显示 */
+  .md-sidebar--primary .md-nav__item,
+  .md-sidebar--primary .md-nav__item--nested,
+  .md-sidebar--primary .md-nav__item--section {
+    display: block !important;
+  }
+
+  /* 确保嵌套导航可见 */
+  .md-sidebar--primary .md-nav--secondary {
+    display: block !important;
+  }
+
+  /* 修复导航toggle按钮 */
+  .md-sidebar--primary .md-nav__toggle ~ .md-nav {
+    display: block !important;
+    max-height: none !important;
   }
 }
 
