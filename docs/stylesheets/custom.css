@@ -108,6 +108,20 @@ body,
   background-color: var(--bg-sidebar) !important;
 }
 
+/* 隐藏侧边栏顶部的site_name */
+.md-nav--primary > .md-nav__title {
+  display: none !important;
+}
+
+/* 确保导航不会自动展开到第三层 */
+.md-nav__item--nested .md-nav {
+  display: none !important;
+}
+
+.md-nav__item--active > .md-nav {
+  display: block !important;
+}
+
 .md-nav {
   background-color: transparent !important;
 }
