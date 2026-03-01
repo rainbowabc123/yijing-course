@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if page.is_homepage %}
+<div class="home-page">
+
+  <div class="home-hero">
+    <div class="home-hero__ornament">易</div>
+    <h1 class="home-hero__title">易经课程学习中心</h1>
+    <p class="home-hero__subtitle">用结构视角，看清处境与位置</p>
+    <div class="home-hero__divider"></div>
+  </div>
+
+  <div class="home-section">
+    <h2 class="home-section__title">关于讲师</h2>
+    <div class="home-intro">
+      <p>我叫未济之思。</p>
+      <p>用易经的结构视角，帮人看清自己的处境和位置。不算命，不卖摆件，不讲玄学。只做一件事：把你现在的处境，放进易经的结构里看清楚。</p>
+      <p>很多时候，困住你的不是能力，是位置。很多痛苦，不是你不够好，是你站错了地方。易经六十四卦，是六十四种人生处境的结构图。读懂它，你会发现自己的很多困惑，早就有了答案。</p>
+      <p>这门课是我把这套视角系统整理出来的结果。无论你是从哪个渠道拿到它的，都欢迎你来。内容会持续更新，我也会一直在。</p>
+    </div>
+    <div class="home-contact">
+      <div class="home-contact__item">
+        <span class="home-contact__label">小红书 / 公众号</span>
+        <span class="home-contact__value">未济之思</span>
+      </div>
+      <div class="home-contact__item">
+        <span class="home-contact__label">微信</span>
+        <span class="home-contact__value">weijizhisi</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-section">
+    <h2 class="home-section__title">学前准备</h2>
+    <div class="home-notice">
+      <div class="home-notice__item">
+        <span class="home-notice__icon">01</span>
+        <div>
+          <strong>不需要任何基础</strong>
+          <p>每一讲都从零开始讲，不预设你懂易经。</p>
+        </div>
+      </div>
+      <div class="home-notice__item">
+        <span class="home-notice__icon">02</span>
+        <div>
+          <strong>建议按顺序阅读</strong>
+          <p>每门课的讲次有内在逻辑，顺序读效果更好。</p>
+        </div>
+      </div>
+      <div class="home-notice__item">
+        <span class="home-notice__icon">03</span>
+        <div>
+          <strong>每门课密码独立</strong>
+          <p>购买哪门课，使用对应密码。密码在购买凭证中。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-section">
+    <h2 class="home-section__title">选择你的课程</h2>
+    <div class="course-cards">
+
+      <a href="{{ '个人成长课/第01讲-易经的核心-不是预测是判断/' | url }}" class="course-card">
+        <div class="course-card__icon">☯</div>
+        <div class="course-card__tag">个人成长</div>
+        <h3 class="course-card__title">易经个人成长课</h3>
+        <p class="course-card__count">共 17 讲 · 6 个模块</p>
+        <p class="course-card__desc">用易经的变化逻辑，建立判断人生处境、做出正确选择的思维体系。从潜龙勿用到亢龙有悔，每一讲对应一种真实的人生处境。</p>
+        <div class="course-card__footer">
+          <span class="course-card__btn">进入课程 →</span>
+        </div>
+      </a>
+
+      <a href="{{ '判断力课/第01讲-为什么人生中最危险的不是失败/' | url }}" class="course-card">
+        <div class="course-card__icon">卦</div>
+        <div class="course-card__tag">判断力</div>
+        <h3 class="course-card__title">易经判断力课</h3>
+        <p class="course-card__count">共 18 讲 · 4 个模块</p>
+        <p class="course-card__desc">从关系、决策、财富到高级判断力，用易经的结构思维训练你在复杂处境中做出清醒判断的能力。</p>
+        <div class="course-card__footer">
+          <span class="course-card__btn">进入课程 →</span>
+        </div>
+      </a>
+
+      <a href="{{ '关系婚姻课/第01讲-易经看关系的底层逻辑/' | url }}" class="course-card">
+        <div class="course-card__icon">姻</div>
+        <div class="course-card__tag">关系婚姻</div>
+        <h3 class="course-card__title">易经看关系与婚姻课</h3>
+        <p class="course-card__count">共 18 讲 · 6 个模块</p>
+        <p class="course-card__desc">不讲感情鸡汤，只讲关系结构。用易经的主客、动静、内外视角，看清关系的本质与走向。</p>
+        <div class="course-card__footer">
+          <span class="course-card__btn">进入课程 →</span>
+        </div>
+      </a>
+
+      <a href="{{ '风水实用课/第01讲-风水不是玄学是环境结构学/' | url }}" class="course-card">
+        <div class="course-card__icon">宅</div>
+        <div class="course-card__tag">风水实用</div>
+        <h3 class="course-card__title">易经风水实用课</h3>
+        <p class="course-card__count">共 15 讲 · 5 个模块</p>
+        <p class="course-card__desc">不讲玄学，不卖摆件。用易经的结构逻辑，教你看懂家居风水的底层原理，从环境结构角度优化生活空间。</p>
+        <div class="course-card__footer">
+          <span class="course-card__btn">进入课程 →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="home-footer-note">
+    如有问题，欢迎私信咨询。
+  </div>
+
+</div>
+{% else %}
+{{ super() }}
+{% endif %}
+{% endblock %}

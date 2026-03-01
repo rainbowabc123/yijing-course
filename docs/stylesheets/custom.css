@@ -1,0 +1,558 @@
+/* ===== 基础色彩变量 ===== */
+:root {
+  --md-primary-fg-color: #c9a84c;
+  --md-primary-fg-color--light: #e2c97e;
+  --md-primary-fg-color--dark: #a07830;
+  --md-accent-fg-color: #c9a84c;
+  --md-default-bg-color: #0d0d0d;
+  --md-default-fg-color: #e8e0d0;
+  --md-default-fg-color--light: #b8a890;
+  --md-default-fg-color--lighter: #7a6a58;
+  --md-default-fg-color--lightest: #3a2e22;
+  --gold: #c9a84c;
+  --gold-light: #e2c97e;
+  --gold-dim: #8a6a28;
+  --bg-dark: #0d0d0d;
+  --bg-card: #161410;
+  --bg-sidebar: #111008;
+  --border-gold: rgba(201, 168, 76, 0.25);
+}
+
+/* ===== 全局背景与字体 ===== */
+body,
+.md-main,
+.md-content,
+[data-md-color-scheme="default"] {
+  background-color: var(--bg-dark) !important;
+  color: var(--md-default-fg-color) !important;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "SimSun", serif !important;
+}
+
+/* ===== 顶部导航栏 ===== */
+.md-header {
+  background-color: #0a0900 !important;
+  border-bottom: 1px solid var(--border-gold) !important;
+  box-shadow: 0 2px 20px rgba(201, 168, 76, 0.08) !important;
+}
+
+.md-header__title {
+  color: var(--gold) !important;
+  font-family: "Noto Serif SC", serif !important;
+  letter-spacing: 0.05em;
+}
+
+.md-header__button {
+  color: var(--gold-light) !important;
+}
+
+/* ===== 导航 tabs ===== */
+.md-tabs {
+  background-color: #0f0e08 !important;
+  border-bottom: 1px solid var(--border-gold) !important;
+}
+
+.md-tabs__link {
+  color: var(--md-default-fg-color--light) !important;
+  font-family: "Noto Serif SC", serif !important;
+  opacity: 1 !important;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--gold) !important;
+}
+
+.md-tabs__indicator {
+  background-color: var(--gold) !important;
+}
+
+/* ===== 侧边栏 ===== */
+.md-sidebar {
+  background-color: var(--bg-sidebar) !important;
+}
+
+.md-sidebar__scrollwrap {
+  background-color: var(--bg-sidebar) !important;
+}
+
+.md-nav {
+  background-color: transparent !important;
+}
+
+.md-nav__title {
+  color: var(--gold) !important;
+  font-family: "Noto Serif SC", serif !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--border-gold) !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.md-nav__item .md-nav__link {
+  color: var(--md-default-fg-color--light) !important;
+  font-family: "Noto Serif SC", serif !important;
+  transition: color 0.2s, padding-left 0.2s !important;
+}
+
+.md-nav__item .md-nav__link:hover,
+.md-nav__item .md-nav__link--active {
+  color: var(--gold) !important;
+  padding-left: 0.8rem !important;
+}
+
+.md-nav__item .md-nav__link--active {
+  border-left: 2px solid var(--gold) !important;
+}
+
+/* ===== 主内容区 ===== */
+.md-content__inner {
+  background-color: var(--bg-dark) !important;
+  padding: 2rem 2.5rem !important;
+}
+
+/* ===== 标题样式 ===== */
+.md-content h1 {
+  color: var(--gold) !important;
+  font-family: "Noto Serif SC", serif !important;
+  font-size: 2rem !important;
+  border-bottom: 1px solid var(--border-gold) !important;
+  padding-bottom: 0.8rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+.md-content h2 {
+  color: var(--gold-light) !important;
+  font-family: "Noto Serif SC", serif !important;
+  font-size: 1.4rem !important;
+  border-left: 3px solid var(--gold) !important;
+  padding-left: 0.8rem !important;
+  margin-top: 2rem !important;
+}
+
+.md-content h3 {
+  color: var(--md-default-fg-color) !important;
+  font-family: "Noto Serif SC", serif !important;
+  font-size: 1.15rem !important;
+}
+
+/* ===== 正文段落 ===== */
+.md-content p,
+.md-content li {
+  color: #d4c8b4 !important;
+  line-height: 2 !important;
+  font-size: 1rem !important;
+}
+
+/* ===== 引用块 ===== */
+.md-content blockquote {
+  border-left: 3px solid var(--gold) !important;
+  background-color: rgba(201, 168, 76, 0.06) !important;
+  color: var(--gold-light) !important;
+  padding: 1rem 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  font-style: italic !important;
+}
+
+/* ===== 分割线 ===== */
+.md-content hr {
+  border-color: var(--border-gold) !important;
+  margin: 2rem 0 !important;
+}
+
+/* ===== 密码输入框（加密页面） ===== */
+.md-content input[type="password"] {
+  background-color: #1a1608 !important;
+  border: 1px solid var(--border-gold) !important;
+  color: var(--gold-light) !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 4px !important;
+  font-family: "Noto Serif SC", serif !important;
+  outline: none !important;
+}
+
+.md-content input[type="password"]:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.3) !important;
+}
+
+.md-content button,
+.md-content input[type="submit"] {
+  background-color: var(--gold) !important;
+  color: #0a0900 !important;
+  border: none !important;
+  padding: 0.6rem 1.5rem !important;
+  border-radius: 4px !important;
+  font-family: "Noto Serif SC", serif !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s !important;
+}
+
+.md-content button:hover {
+  background-color: var(--gold-light) !important;
+}
+
+/* ===== 搜索框 ===== */
+.md-search__input {
+  background-color: #1a1608 !important;
+  color: var(--md-default-fg-color) !important;
+  border: 1px solid var(--border-gold) !important;
+}
+
+.md-search__input::placeholder {
+  color: var(--md-default-fg-color--lighter) !important;
+}
+
+.md-search-result {
+  background-color: #161410 !important;
+}
+
+.md-search-result__article {
+  background-color: #161410 !important;
+  color: var(--md-default-fg-color) !important;
+}
+
+/* ===== 目录（TOC） ===== */
+.md-nav--secondary .md-nav__link {
+  color: var(--md-default-fg-color--light) !important;
+}
+
+.md-nav--secondary .md-nav__link:hover,
+.md-nav--secondary .md-nav__link--active {
+  color: var(--gold) !important;
+}
+
+/* ===== 页脚 ===== */
+.md-footer {
+  background-color: #0a0900 !important;
+  border-top: 1px solid var(--border-gold) !important;
+  color: var(--md-default-fg-color--light) !important;
+}
+
+.md-footer-meta {
+  background-color: #080700 !important;
+}
+
+.md-footer__link {
+  color: var(--gold-dim) !important;
+}
+
+.md-footer__link:hover {
+  color: var(--gold) !important;
+}
+
+/* ===== 首页卡片区域 ===== */
+.md-content .course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.md-content .course-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 1.8rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.md-content .course-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 24px rgba(201, 168, 76, 0.15);
+}
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* ===== 链接 ===== */
+.md-content a {
+  color: var(--gold) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: border-color 0.2s !important;
+}
+
+.md-content a:hover {
+  border-bottom-color: var(--gold) !important;
+}
+
+/* ===== 代码块 ===== */
+.md-content code {
+  background-color: #1e1a10 !important;
+  color: var(--gold-light) !important;
+  border: 1px solid var(--border-gold) !important;
+  border-radius: 3px !important;
+  padding: 0.1em 0.4em !important;
+}
+
+/* ===== 首页整体 ===== */
+.home-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* 首页隐藏侧边栏（仅首页） */
+body:has(.home-page) .md-sidebar--primary {
+  display: none !important;
+}
+
+body:has(.home-page) .md-content {
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Hero 区域 */
+.home-hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+.home-hero__ornament {
+  font-size: 3.5rem;
+  color: var(--gold);
+  font-family: "Noto Serif SC", serif;
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 40px rgba(201,168,76,0.4);
+}
+.home-hero__title {
+  font-size: 2.2rem !important;
+  color: var(--gold) !important;
+  font-family: "Noto Serif SC", serif !important;
+  letter-spacing: 0.1em !important;
+  border: none !important;
+  margin: 0 0 0.8rem !important;
+  padding: 0 !important;
+}
+.home-hero__subtitle {
+  color: var(--md-default-fg-color--light) !important;
+  font-size: 1.05rem !important;
+  letter-spacing: 0.05em;
+  margin: 0 !important;
+}
+.home-hero__divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.5rem auto 0;
+  opacity: 0.5;
+}
+
+/* 区块标题 */
+.home-section {
+  margin-top: 3rem;
+}
+.home-section__title {
+  font-size: 1.1rem !important;
+  color: var(--gold-dim) !important;
+  font-family: "Noto Serif SC", serif !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* 自我介绍 */
+.home-intro p {
+  color: #c8bca8 !important;
+  line-height: 2 !important;
+  margin-bottom: 0.8rem !important;
+  font-size: 1rem !important;
+}
+
+/* 学前须知 */
+.home-notice {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.home-notice__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 6px;
+}
+.home-notice__icon {
+  font-size: 1.4rem;
+  color: var(--gold);
+  font-family: "Noto Serif SC", serif;
+  min-width: 2rem;
+  line-height: 1.4;
+}
+.home-notice__item strong {
+  display: block;
+  color: var(--gold-light) !important;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+.home-notice__item p {
+  color: var(--md-default-fg-color--light) !important;
+  font-size: 0.9rem !important;
+  margin: 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* 课程卡片 */
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.course-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 1.8rem;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.course-card:hover {
+  border-color: var(--gold) !important;
+  box-shadow: 0 6px 30px rgba(201,168,76,0.15);
+  transform: translateY(-2px);
+}
+.course-card__icon {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  line-height: 1;
+}
+.course-card__tag {
+  font-size: 0.75rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+.course-card__title {
+  font-size: 1.15rem !important;
+  color: var(--gold-light) !important;
+  font-family: "Noto Serif SC", serif !important;
+  margin: 0 0 0.4rem !important;
+}
+.course-card__count {
+  font-size: 0.82rem !important;
+  color: var(--md-default-fg-color--lighter) !important;
+  margin: 0 0 1rem !important;
+  line-height: 1.4 !important;
+}
+.course-card__desc {
+  font-size: 0.9rem !important;
+  color: #b0a090 !important;
+  line-height: 1.8 !important;
+  flex: 1;
+  margin: 0 0 1.2rem !important;
+}
+.course-card__footer {
+  margin-top: auto;
+}
+.course-card__btn {
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+/* 底部备注 */
+.home-footer-note {
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--md-default-fg-color--lighter) !important;
+  font-size: 0.9rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-gold);
+}
+
+/* ===== 手机端适配 ===== */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 1rem 1rem 3rem;
+  }
+  .home-hero__title {
+    font-size: 1.6rem !important;
+  }
+  .home-hero__ornament {
+    font-size: 2.5rem;
+  }
+  .course-cards {
+    grid-template-columns: 1fr;
+  }
+  .home-notice__item {
+    padding: 1rem;
+  }
+  .md-content__inner {
+    padding: 1rem 1rem !important;
+  }
+  .md-content h1 {
+    font-size: 1.5rem !important;
+  }
+  .md-content h2 {
+    font-size: 1.2rem !important;
+  }
+  .md-content p,
+  .md-content li {
+    font-size: 0.95rem !important;
+    line-height: 1.9 !important;
+  }
+  /* 手机端侧边栏收起时不占位 */
+  .md-sidebar {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero__title {
+    font-size: 1.35rem !important;
+    letter-spacing: 0.05em !important;
+  }
+  .course-card {
+    padding: 1.3rem;
+  }
+}
+
+/* ===== 讲师联系方式 ===== */
+.home-contact {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.home-contact__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+}
+.home-contact__label {
+  font-size: 0.8rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.05em;
+}
+.home-contact__value {
+  font-size: 0.95rem;
+  color: var(--gold-light);
+  font-family: "Noto Serif SC", serif;
+}
