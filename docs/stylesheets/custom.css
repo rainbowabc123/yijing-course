@@ -62,11 +62,18 @@ body,
   /* 移动端侧边栏：默认全部展开 */
   .md-nav__item--nested .md-nav {
     display: block !important;
+    position: static !important;
   }
 
   /* 隐藏所有导航标题（书形按钮） */
   .md-nav__title {
     display: none !important;
+  }
+
+  /* 重置导航容器的定位 */
+  .md-nav--primary,
+  .md-nav--primary .md-nav {
+    position: static !important;
   }
 
   /* 第一层：课程名称（易经个人成长课等） - 包括link和label */
