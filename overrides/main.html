@@ -133,8 +133,8 @@
     if (window.innerWidth <= 1220) {
       const toggleBtn = document.createElement('button');
       toggleBtn.className = 'mobile-sidebar-toggle';
-      toggleBtn.innerHTML = '☰';
-      toggleBtn.style.cssText = 'position: fixed; top: 1rem; left: 1rem; z-index: 10; background: var(--gold); color: #0f0e08; border: none; border-radius: 4px; width: 2.5rem; height: 2.5rem; font-size: 1.5rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3);';
+      toggleBtn.innerHTML = '目录';
+      toggleBtn.style.cssText = 'position: fixed; top: 1rem; left: 1rem; z-index: 10; background: var(--gold); color: #0f0e08; border: none; border-radius: 4px; padding: 0.5rem 0.8rem; font-size: 0.9rem; font-family: "Noto Serif SC", serif; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3);';
       document.body.appendChild(toggleBtn);
 
       const sidebarPrimary = document.querySelector('.md-sidebar--primary');
@@ -147,21 +147,27 @@
         const isOpen = sidebarPrimary.style.transform === 'translateX(0px)';
         if (isOpen) {
           sidebarPrimary.style.transform = 'translateX(-100%)';
+          sidebarPrimary.style.zIndex = '';
           overlay.style.display = 'none';
         } else {
           sidebarPrimary.style.transform = 'translateX(0)';
+          sidebarPrimary.style.zIndex = '5';
           overlay.style.display = 'block';
         }
       });
 
       overlay.addEventListener('click', function() {
         sidebarPrimary.style.transform = 'translateX(-100%)';
+        sidebarPrimary.style.zIndex = '';
         overlay.style.display = 'none';
       });
 
       // 初始状态：隐藏侧边栏
       sidebarPrimary.style.transform = 'translateX(-100%)';
       sidebarPrimary.style.transition = 'transform 0.3s ease';
+      sidebarPrimary.style.position = 'fixed';
+      sidebarPrimary.style.left = '0';
+      sidebarPrimary.style.top = '0';
     }
   });
 </script>
