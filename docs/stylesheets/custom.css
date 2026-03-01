@@ -70,6 +70,8 @@ body,
     display: block !important;
     max-height: none !important;
     position: static !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   /* 隐藏所有导航标题（书形按钮） */
