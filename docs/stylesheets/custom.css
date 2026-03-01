@@ -108,8 +108,13 @@ body,
   background-color: var(--bg-sidebar) !important;
 }
 
-/* 隐藏侧边栏顶部的site_name */
+/* 隐藏侧边栏顶部的site_name（第一层标题） */
 .md-nav--primary > .md-nav__title {
+  display: none !important;
+}
+
+/* 隐藏第二层导航的标题（课程名称，如"易经个人成长课"） */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__title {
   display: none !important;
 }
 
