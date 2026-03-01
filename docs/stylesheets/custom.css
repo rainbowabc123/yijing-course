@@ -172,13 +172,15 @@ body,
   display: none !important;
 }
 
-/* 确保导航不会自动展开到第三层 */
-.md-nav__item--nested .md-nav {
-  display: none !important;
-}
+/* 桌面端：确保导航不会自动展开到第三层 */
+@media (min-width: 76.25em) {
+  .md-nav__item--nested .md-nav {
+    display: none !important;
+  }
 
-.md-nav__item--active > .md-nav {
-  display: block !important;
+  .md-nav__item--active > .md-nav {
+    display: block !important;
+  }
 }
 
 .md-nav {
