@@ -45,8 +45,8 @@ body,
   color: var(--gold-light) !important;
 }
 
-/* 课程页在桌面端隐藏header和tabs，移动端保留 */
-@media (min-width: 76.25em) {
+/* 课程页在移动端隐藏header和tabs，桌面端保留 */
+@media (max-width: 76.1875em) {
   body:not(:has(.home-page)) .md-header {
     display: none !important;
   }
