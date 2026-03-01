@@ -15,7 +15,7 @@ theme:
     text: Noto Serif SC
   features:
     - navigation.tabs
-    - navigation.sections
+    - navigation.expand
     - navigation.top
     - toc.integrate
 
