@@ -556,3 +556,55 @@ body:has(.home-page) .md-content {
   color: var(--gold-light);
   font-family: "Noto Serif SC", serif;
 }
+
+/* ===== 移动端响应式布局 ===== */
+@media screen and (max-width: 76.1875em) {
+  /* 隐藏左侧导航栏 */
+  .md-sidebar--primary {
+    display: none !important;
+  }
+
+  /* 主内容区域占满全宽 */
+  .md-content {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* 确保文章内容区域正常显示 */
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
+}
+
+/* 小屏幕优化（手机竖屏） */
+@media screen and (max-width: 44.9375em) {
+  /* 首页课程卡片单列显示 */
+  .home-courses {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* 首页 Hero 区域调整 */
+  .home-hero {
+    padding: 2rem 0 1.5rem !important;
+  }
+
+  .home-hero h1 {
+    font-size: 2rem !important;
+  }
+
+  .home-hero__subtitle {
+    font-size: 1rem !important;
+  }
+
+  /* 学前准备卡片单列 */
+  .home-prep__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 联系方式单列 */
+  .home-contact__grid {
+    grid-template-columns: 1fr !important;
+  }
+}
