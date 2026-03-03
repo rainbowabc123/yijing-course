@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: rainbowabc123/yijing-course
   branch: master
 
 media_folder: "docs/images"
