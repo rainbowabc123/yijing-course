@@ -1,0 +1,63 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "docs/images"
+public_folder: "/images"
+
+locale: zh_Hans
+
+collections:
+  - name: "personal-growth"
+    label: "易经个人成长课"
+    folder: "docs/个人成长课"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: "标题", name: "title", widget: "string", required: false}
+      - {label: "内容", name: "body", widget: "markdown"}
+
+  - name: "judgment"
+    label: "易经判断力课"
+    folder: "docs/判断力课"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: "标题", name: "title", widget: "string", required: false}
+      - {label: "内容", name: "body", widget: "markdown"}
+
+  - name: "relationship"
+    label: "易经关系婚姻课"
+    folder: "docs/关系婚姻课"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: "标题", name: "title", widget: "string", required: false}
+      - {label: "内容", name: "body", widget: "markdown"}
+
+  - name: "fengshui"
+    label: "易经风水实用课"
+    folder: "docs/风水实用课"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: "标题", name: "title", widget: "string", required: false}
+      - {label: "内容", name: "body", widget: "markdown"}
+
+  - name: "homepage"
+    label: "首页设置"
+    files:
+      - label: "首页"
+        name: "index"
+        file: "docs/index.md"
+        fields:
+          - {label: "标题", name: "title", widget: "string", required: false}
+          - {label: "内容", name: "body", widget: "markdown"}
